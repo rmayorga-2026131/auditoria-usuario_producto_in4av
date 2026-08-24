@@ -23,7 +23,7 @@
 hs_err_pid*
 replay_pid*
 
-src/org/rudymayorga/system/config/Enviroment.java
+src/com/rudymayorga/system/config/Enviroment.java
 build/*
 dist/*
 
