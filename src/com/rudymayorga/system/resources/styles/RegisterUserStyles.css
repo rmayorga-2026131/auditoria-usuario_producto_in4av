@@ -1,0 +1,17 @@
+
+.form-register {
+    -fx-background-color: #0A6E57;
+}
+
+.form-register .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.form-register .text-field,
+.form-register .password-field {
+    -fx-border-color: #0DD3E3;
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
