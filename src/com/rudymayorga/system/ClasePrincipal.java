@@ -12,7 +12,7 @@ public class ClasePrincipal extends Application {
     }
     
     @Override
-    public void start(Stage stageRoot) {
+    public void start(Stage stageRoot){
         SceneManager.getInstanciaSceneManager().setStagePrincipal(stageRoot);
         ViewFactory viewFacto = new ViewFactory();
         viewFacto.viewLogin();

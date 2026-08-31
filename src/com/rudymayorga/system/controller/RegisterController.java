@@ -72,7 +72,7 @@ public class RegisterController implements Initializable{
            alertInfo.viewAlert("ERROR","ERROR DE CAMPO", "ERROR CAMPOS VACIOS",
                             "NO LLENASTE LOS CAMPOS");
            return;
-            
+
         }
         
         /*
@@ -113,3 +113,5 @@ public class RegisterController implements Initializable{
     }
     
 }
+
+
