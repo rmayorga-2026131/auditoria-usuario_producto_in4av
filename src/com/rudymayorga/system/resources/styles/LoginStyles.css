@@ -1,37 +1,39 @@
-.etiqueta {
-    -fx-font-size: 20px;
+.etiqueta{
+    -fx-font-size:20px;
 }
-
-.campo {
+.campo{
     -fx-border-color: #79db56;
     -fx-text-fill: #6c9926;
-    -fx-background-color: white;
-    -fx-border-width: 2px;
-    -fx-border-radius: 5px;
+    -fx-background-color:white;
+    -fx-border-width:2px;
+    -fx-border-radius:5px;
 }
-
-.link {
-    -fx-text-fill: #00f;
+.link{
+    -fx-text-fill: #00F;
+    -fx-font-size:20px;
+    -fx-font-family:"Impact";
 }
 .link:hover{
     -fx-text-fill: #f00;
 }
 .link:pressed{
-    -fx-text-fill:#ffff88;
+    -fx-text-fill: #ffa488;
 }
 
-#btn-login {
-    -fx-background-color: #1e1e2e;
-    -fx-border-color: #a6e3a1;
-    -fx-text-fill: #a6e3a1;
-    -fx-border-width: 2px;
-    -fx-border-radius: 6px;
-    -fx-background-radius: 6px;
-    -fx-font-family: "Impact";
+#btn-login{  
+    -fx-background-color: #317da7;
+    -fx-border-color: #0036aa;
+    -fx-text-fill:white;
+    -fx-font-size:20px;
+    -fx-font-weight:bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 10px;
 }
-#btn-login:hover{
-    -fx-text-fill: #ffffff;
+#btn-login:hover{ 
+    -fx-background-color: #319ea7;
+    -fx-border-color: #2f367c;
 }
-#btn-login:pressed{
-    -fx-text-fill: #78350f;
+#btn-login:pressed{  
+    -fx-background-color: black;
+    -fx-border-color: #2f3c92;
 }
