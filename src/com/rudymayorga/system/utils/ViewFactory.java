@@ -9,7 +9,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
  
 public class ViewFactory {
-    private final String PATH_VIEWS="/org/kennethvelasquez/system/view/";
+    private final String PATH_VIEWS="/com/rudymayorga/system/view/";
     
     public Scene loadFileFXML(String nameFile, int width, int height){
         String pathOfFile = PATH_VIEWS + nameFile;
@@ -38,7 +38,14 @@ public class ViewFactory {
                             .getStagePrincipal().setTitle("REGISTRO DE USUARIO");
                     SceneManager.getInstanciaSceneManager()
                             .getStagePrincipal().setResizable(false);
-                    scene = loadFileFXML("RegisterView.fxml",350,400);
+                    scene = loadFileFXML("RegistroView.fxml",350,400);
+                }
+                case "dashboard" -> {
+                    SceneManager.getInstanciaSceneManager()
+                            .getStagePrincipal().setTitle("DASHBOARD");
+                    SceneManager.getInstanciaSceneManager()
+                            .getStagePrincipal().setResizable(true);
+                    scene = loadFileFXML("DashboardView.fxml",700,500);
                 }
                 default      -> scene = loadFileFXML("LoginView.fxml",0,0); 
             }
@@ -56,8 +63,8 @@ public class ViewFactory {
         loadScene("login");
     }
     
-    
-    
-    
+    public void viewDashboard(){
+        loadScene("dashboard");
+    }
     
 }

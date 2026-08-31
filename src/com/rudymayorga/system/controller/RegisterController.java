@@ -4,6 +4,8 @@
  */
 package com.rudymayorga.system.controller;
 
+import com.rudymayorga.system.service.UserService;
+import com.rudymayorga.system.service.UserStatus;
 import com.rudymayorga.system.utils.AlertInformation;
 import com.rudymayorga.system.utils.Validations;
 import com.rudymayorga.system.utils.ViewFactory;
@@ -32,6 +34,7 @@ public class RegisterController implements Initializable{
     @FXML private Button btnCreateUser;
     private Validations validate = new Validations();
     private AlertInformation alertInfo = new AlertInformation();
+    private UserService userService = new UserService();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -108,8 +111,20 @@ public class RegisterController implements Initializable{
                             "LA CONTRASEÑA NO COINCIDEN");
             return;
         }
-            
-            
+        
+        UserStatus status = userService.createUser(user, name, lastName, email, password);
+        
+        switch (status) {
+            case USER_CREATED -> {
+                alertInfo.viewAlert("INFO","REGISTRO EXITOSO", "USUARIO CREADO",
+                                "TU CUENTA SE CREO CORRECTAMENTE, YA PUEDES INICIAR SESION");
+                ViewFactory viewFacto = new ViewFactory();
+                viewFacto.viewLogin();
+            }
+            case ERROR_USER_CREATE -> alertInfo.viewAlert("ERROR","ERROR AL CREAR", "ERROR AL CREAR USUARIO",
+                                "OCURRIO UN ERROR AL CREAR TU CUENTA, INTENTALO DE NUEVO");
+            default -> {}
+        }
     }
     
 }

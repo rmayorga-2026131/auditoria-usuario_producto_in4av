@@ -9,4 +9,5 @@ import com.rudymayorga.system.model.Users;
 
 public interface UserInterface {
     void create (Users user);
+    Users search (String userOrEmail);
 }

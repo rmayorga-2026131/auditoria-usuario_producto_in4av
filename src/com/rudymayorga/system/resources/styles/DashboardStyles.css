@@ -1,0 +1,12 @@
+.dashboard-header{
+    -fx-background-color: #317da7;
+}
+.etiqueta-bienvenida{
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0A6E57;
+}
+.etiqueta-correo{
+    -fx-font-size: 16px;
+    -fx-text-fill: #666666;
+}

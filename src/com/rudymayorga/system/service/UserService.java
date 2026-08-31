@@ -24,4 +24,8 @@ public class UserService {
         }
         
     }
+    
+    public Users findUser(String userOrEmail){
+        return userRepo.search(userOrEmail);
+    }
 }
