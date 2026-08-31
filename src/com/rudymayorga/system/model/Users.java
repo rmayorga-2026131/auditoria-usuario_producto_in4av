@@ -25,13 +25,14 @@ public class Users {
         this.id_user = id_user;
     }
 
-    public Users(String name, String lastname, String email, String user, String id_user) {
+    public Users(String name, String lastname, String email, String user, String password) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
         this.user = user;
-        this.id_user = id_user;
+        this.password = password;
     }
+
     
     
     

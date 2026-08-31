@@ -4,10 +4,9 @@
  */
 package com.rudymayorga.system.repository;
 
-/**
- *
- * @author informatica
- */
+import com.rudymayorga.system.model.Users;
+
+
 public interface UserInterface {
-    
+    void create (Users user);
 }
