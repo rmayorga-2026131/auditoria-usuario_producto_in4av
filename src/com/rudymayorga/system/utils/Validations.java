@@ -10,48 +10,48 @@ package com.rudymayorga.system.utils;
  */
 public class Validations {
     
-    
-    
-    
-    public Validations(){}
+    public Validations(){ 
+    }
     
     public Boolean validateTextEmpty(String text){
         boolean isEmpty = false;
         
-        if(text.isEmpty() ==true || text.isBlank() == true)
+        if( text.isEmpty() ==true  ||  text.isBlank() == true )
             isEmpty = true;
         return isEmpty;
     }
     
-    
-    public Boolean validateTextLength(String text, int textMax){        
+    public Boolean validateTextLength( String text, int textMax ){
         return text.length()<= textMax;
-        
     }
     
-    public Boolean equalsText(String textoOriginal, String textCompare){
-        return textoOriginal.equals(textCompare);
+    public Boolean equalsText(String textOriginal, String textCompare){
+        return textOriginal.equals(textCompare);
     }
+    
     public Boolean validateEmail(String email){
-        int dotCount = 0; // contar el punto
-        int arrobaCount = 0;
-        //validar punto
-        for(int index = 0; index< email.length(); index++){
-            if(email.charAt(index)== '.')  
+        int dotCount= 0 , arrobeCount=0;
+        //Valida el punto
+        for( int index = 0; index < email.length(); index++ ){
+            if( email.charAt(index) == '.' )
                 dotCount++;
-            if(dotCount>1)
+            if( dotCount >1 )
                 return false;
         }
-        // validar @
-        for(int index = 0; index< email.length(); index++){
-            if(email.charAt(index)== '@')  
-                arrobaCount++;   
+        //REGEX
+        //VALIDAR CANTIDAD ARROBAS
+        for( int index = 0; index < email.length(); index++ ){
+            if( email.charAt(index) == '@' )
+                arrobeCount++;
         }
-        if(arrobaCount != 1)
-                return false;
+        if( arrobeCount != 1 )
+            return false;
         
         return true;
-    }
-    //regex
+    }    
+    
+    
+    
+    
     
 }
